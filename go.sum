@@ -1,0 +1,4 @@
+github.com/serum-errors/go-serum v0.7.0 h1:i10aSKX7mNBjuQ2sq6ocN8dV85GlwmU8aJmMWuaY7xo=
+github.com/serum-errors/go-serum v0.7.0/go.mod h1:h99dcDVCjuiL3gMcLs8OwnABIBRNm4Nc9qV9gATw1lc=
+github.com/warpfork/go-fsx v0.3.0 h1:RGueN83R4eOc/2oZkQ58RRxQS9JIevWgvoM55oaN9tE=
+github.com/warpfork/go-fsx v0.3.0/go.mod h1:oTACCMj+Zle+vgVa5SAhGAh7WksYpLgGUCKEAVc+xPg=
