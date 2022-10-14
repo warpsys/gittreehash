@@ -71,9 +71,9 @@ func hashSomething(fsys fsx.FS, pth string) ([32]byte, fs.FileMode, error) {
 		preamble.WriteByte(0)
 		preambleLen := preamble.Len()
 
-		f, err := fsys.Open(pth)
-		if err != nil {
-			return [32]byte{}, mode, serum.Errorf(ErrIO, "%w", err)
+		f, err2 := fsys.Open(pth)
+		if err2 != nil {
+			return [32]byte{}, mode, serum.Errorf(ErrIO, "%w", err2)
 		}
 		defer f.Close()
 		hash, coveredSize, err := hashStream(io.MultiReader(&preamble, f))
@@ -167,9 +167,9 @@ func hashSomething(fsys fsx.FS, pth string) ([32]byte, fs.FileMode, error) {
 
 func hashStream(data io.Reader) (hash [32]byte, contentSize int64, err error) {
 	h := sha256.New()
-	contentSize, err = io.Copy(h, data)
-	if err != nil {
-		err = serum.Errorf(ErrIO, "%w", err)
+	contentSize, err2 := io.Copy(h, data)
+	if err2 != nil {
+		err = serum.Errorf(ErrIO, "%w", err2)
 		return
 	}
 	h.Sum(hash[:0])
