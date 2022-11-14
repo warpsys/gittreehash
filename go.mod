@@ -1,4 +1,4 @@
-module github.com/warpsys/gittreehash
+module github.com/warptools/gittreehash
 
 go 1.19
 
