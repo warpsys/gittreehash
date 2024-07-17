@@ -132,7 +132,7 @@ func hashSomething(fsys fsx.FS, pth string) ([32]byte, fs.FileMode, error) {
 			case fs.ModeSymlink:
 				buf.Write([]byte("120000 "))
 			case fs.ModeDir:
-				buf.Write([]byte("40000 "))
+				buf.Write([]byte("40000 ")) // This certainly looks like a typo, doesn't it!  But, indeed... this is exactly how git encodes this.
 			default:
 				panic("unreachable?  other types should've error earlier")
 			}

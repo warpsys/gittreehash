@@ -10,6 +10,9 @@ mkdir _test
 		echo "a file" > a_file
 		mkdir a_dir
 		echo "second file" > a_dir/other_file
+		echo "more file" > a_dir/more_files
+		mkdir a_dir/deeper
+		echo "more file" > a_dir/deeper/samefile
 		ln -s "target string" a_symlink
 		git add .
 		git commit -m "demo sha256" # don't care about commit hash, but is easiest route through CLI to get treehash.
